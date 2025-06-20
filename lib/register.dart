@@ -1,4 +1,4 @@
-import 'package:HPGM/splashscreen.dart';
+import 'package:farmer_app/splashscreen.dart';
 import 'package:flutter/material.dart';
 
 class register extends StatefulWidget {
@@ -216,3 +216,4 @@ class _registerState extends State<register> {
     );
   }
 }
+

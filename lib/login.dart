@@ -1,6 +1,6 @@
-import 'package:HPGM/Services/auth_services.dart';
-import 'package:HPGM/components/custom_text_field.dart';
-import 'package:HPGM/forgot_password.dart';
+import 'package:farmer_app/Services/auth_services.dart';
+import 'package:farmer_app/components/custom_text_field.dart';
+import 'package:farmer_app/forgot_password.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -154,3 +154,4 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
+

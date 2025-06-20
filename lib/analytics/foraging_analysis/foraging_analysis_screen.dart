@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'dart:math' as math;
-import 'package:HPGM/bee_counter/bee_counter_model.dart';
-import 'package:HPGM/bee_counter/bee_count_database.dart';
-import 'package:HPGM/Services/weather_service.dart';
+import 'package:farmer_app/bee_counter/bee_counter_model.dart';
+import 'package:farmer_app/bee_counter/bee_count_database.dart';
+import 'package:farmer_app/Services/weather_service.dart';
 import 'foraging_analysis_engine.dart';
 
 class ForagingAnalysisScreen extends StatefulWidget {
@@ -158,14 +158,15 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
       );
 
       // Filter to include only records from the most recent day with data
-      results = results.where((result) {
-        DateTime recordDate = DateTime(
-          result.timestamp.year,
-          result.timestamp.month,
-          result.timestamp.day,
-        );
-        return recordDate.isAtSameMomentAs(mostRecentDate);
-      }).toList();
+      results =
+          results.where((result) {
+            DateTime recordDate = DateTime(
+              result.timestamp.year,
+              result.timestamp.month,
+              result.timestamp.day,
+            );
+            return recordDate.isAtSameMomentAs(mostRecentDate);
+          }).toList();
 
       return results;
     } catch (e) {
@@ -190,12 +191,13 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
       }
 
       // Filter by date range
-      results = results.where((result) {
-        return result.timestamp.isAfter(_dateRange.start) &&
-            result.timestamp.isBefore(
-              _dateRange.end.add(Duration(days: 1)),
-            );
-      }).toList();
+      results =
+          results.where((result) {
+            return result.timestamp.isAfter(_dateRange.start) &&
+                result.timestamp.isBefore(
+                  _dateRange.end.add(Duration(days: 1)),
+                );
+          }).toList();
 
       return results;
     } catch (e) {
@@ -605,7 +607,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             Text(
               'Return Rate by Time of Day',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 18, 
                 fontWeight: FontWeight.bold,
                 color: _textColor,
               ),
@@ -618,8 +620,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             SizedBox(height: 20), // Increased spacing
             Container(
               height: 250,
-              padding: EdgeInsets.only(
-                  top: 16, right: 16), // Added padding for chart
+              padding: EdgeInsets.only(top: 16, right: 16), // Added padding for chart
               decoration: BoxDecoration(
                 color: Colors.grey[50], // Light background for chart area
                 borderRadius: BorderRadius.circular(8),
@@ -803,7 +804,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             Text(
               'Foraging Trip Duration Distribution',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 18, 
                 fontWeight: FontWeight.bold,
                 color: _textColor,
               ),
@@ -926,7 +927,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             Text(
               'Return Rate Comparison by Time of Day',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 18, 
                 fontWeight: FontWeight.bold,
                 color: _textColor,
               ),
@@ -934,8 +935,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             SizedBox(height: 20), // Increased spacing
             Container(
               height: 250,
-              padding: EdgeInsets.only(
-                  top: 16, right: 16), // Added padding for chart
+              padding: EdgeInsets.only(top: 16, right: 16), // Added padding for chart
               decoration: BoxDecoration(
                 color: Colors.grey[50], // Light background for chart area
                 borderRadius: BorderRadius.circular(8),
@@ -1104,7 +1104,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             Text(
               'Time-Based Foraging Health',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 18, 
                 fontWeight: FontWeight.bold,
                 color: _textColor,
               ),
@@ -1312,7 +1312,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             Text(
               'Foraging Performance',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 18, 
                 fontWeight: FontWeight.bold,
                 color: _textColor,
               ),
@@ -1390,7 +1390,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             Text(
               'Key Metrics',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 18, 
                 fontWeight: FontWeight.bold,
                 color: _textColor,
               ),
@@ -1444,8 +1444,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
                           '${metrics['estimatedForagingDuration'].toStringAsFixed(0)} min',
                           'Average time',
                           Icons.timer,
-                          _getTripDurationColor(
-                              metrics['estimatedForagingDuration']),
+                          _getTripDurationColor(metrics['estimatedForagingDuration']),
                         ),
                       ),
                     ],
@@ -1468,9 +1467,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
                           metrics['totalNetChange'].toString(),
                           'Population change',
                           Icons.people,
-                          metrics['totalNetChange'] >= 0
-                              ? Colors.green
-                              : Colors.red,
+                          metrics['totalNetChange'] >= 0 ? Colors.green : Colors.red,
                         ),
                       ),
                     ],
@@ -1625,7 +1622,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             Text(
               'Foraging Efficiency',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 18, 
                 fontWeight: FontWeight.bold,
                 color: _textColor,
               ),
@@ -1711,8 +1708,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
                               .toStringAsFixed(0),
                           benchmarkComparison['foragingDuration']['benchmark']
                               .toStringAsFixed(0),
-                          benchmarkComparison['foragingDuration']
-                              ['performance'],
+                          benchmarkComparison['foragingDuration']['performance'],
                           'min',
                         ),
                         SizedBox(height: 12),
@@ -1722,8 +1718,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
                               .toStringAsFixed(1),
                           benchmarkComparison['entryExitImbalance']['benchmark']
                               .toStringAsFixed(1),
-                          benchmarkComparison['entryExitImbalance']
-                              ['performance'],
+                          benchmarkComparison['entryExitImbalance']['performance'],
                           '%',
                           lowerIsBetter: true,
                         ),
@@ -1852,52 +1847,56 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
     }
 
     return Column(
-      children: limitingFactors.map((factor) {
-        Color severityColor = factor['severity'] == 'High'
-            ? Colors.red
-            : (factor['severity'] == 'Medium' ? Colors.orange : Colors.amber);
+      children:
+          limitingFactors.map((factor) {
+            Color severityColor =
+                factor['severity'] == 'High'
+                    ? Colors.red
+                    : (factor['severity'] == 'Medium'
+                        ? Colors.orange
+                        : Colors.amber);
 
-        return Padding(
-          padding: const EdgeInsets.only(bottom: 12.0), // Increased spacing
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                margin: EdgeInsets.only(top: 2),
-                width: 12,
-                height: 12,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: severityColor,
-                ),
-              ),
-              SizedBox(width: 12), // Increased spacing
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      '${factor['factor']} (${factor['severity']} Impact)',
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold,
-                      ),
+            return Padding(
+              padding: const EdgeInsets.only(bottom: 12.0), // Increased spacing
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(top: 2),
+                    width: 12,
+                    height: 12,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: severityColor,
                     ),
-                    SizedBox(height: 4),
-                    Text(
-                      factor['description'],
-                      style: TextStyle(
-                        fontSize: 13,
-                        color: Colors.grey[700],
-                      ),
+                  ),
+                  SizedBox(width: 12), // Increased spacing
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '${factor['factor']} (${factor['severity']} Impact)',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        SizedBox(height: 4),
+                        Text(
+                          factor['description'],
+                          style: TextStyle(
+                            fontSize: 13,
+                            color: Colors.grey[700],
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-            ],
-          ),
-        );
-      }).toList(),
+            );
+          }).toList(),
     );
   }
 
@@ -1951,7 +1950,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             Text(
               'Weather Impact',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 18, 
                 fontWeight: FontWeight.bold,
                 color: _textColor,
               ),
@@ -1971,18 +1970,17 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
                       children: [
                         weatherIconUrl.isNotEmpty
                             ? Image.network(
-                                weatherIconUrl,
-                                width: 64,
-                                height: 64,
-                                errorBuilder: (context, error, stackTrace) =>
-                                    Icon(
-                                  Icons.wb_sunny,
-                                  size: 48,
-                                  color: Colors.amber,
-                                ),
-                              )
-                            : Icon(Icons.wb_sunny,
-                                size: 48, color: Colors.amber),
+                              weatherIconUrl,
+                              width: 64,
+                              height: 64,
+                              errorBuilder:
+                                  (context, error, stackTrace) => Icon(
+                                    Icons.wb_sunny,
+                                    size: 48,
+                                    color: Colors.amber,
+                                  ),
+                            )
+                            : Icon(Icons.wb_sunny, size: 48, color: Colors.amber),
                         SizedBox(height: 8),
                         Text(
                           currentTemp,
@@ -1993,8 +1991,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
                         ),
                         Text(
                           currentCondition,
-                          style:
-                              TextStyle(fontSize: 14, color: Colors.grey[700]),
+                          style: TextStyle(fontSize: 14, color: Colors.grey[700]),
                           textAlign: TextAlign.center,
                         ),
                       ],
@@ -2024,8 +2021,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
                         Text(
                           environmentalInsights[mostInfluentialFactor] ??
                               'No specific insights available.',
-                          style:
-                              TextStyle(fontSize: 14, color: Colors.grey[700]),
+                          style: TextStyle(fontSize: 14, color: Colors.grey[700]),
                         ),
                       ],
                     ),
@@ -2066,9 +2062,10 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
     String mostInfluentialFactor =
         _analysisResults['environmentalFactors']['mostInfluentialFactor'] ?? '';
 
-    List<MapEntry<String, String>> insights = environmentalInsights.entries
-        .where((entry) => entry.key != mostInfluentialFactor)
-        .toList();
+    List<MapEntry<String, String>> insights =
+        environmentalInsights.entries
+            .where((entry) => entry.key != mostInfluentialFactor)
+            .toList();
 
     if (insights.isEmpty) {
       return Padding(
@@ -2200,7 +2197,9 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
       }
 
       Color barColor =
-          hour == metrics['peakActivityHour'] ? Colors.amber : _primaryColor;
+          hour == metrics['peakActivityHour']
+              ? Colors.amber
+              : _primaryColor;
 
       barGroups.add(
         BarChartGroupData(
@@ -2228,7 +2227,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             Text(
               'Hourly Activity',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 18, 
                 fontWeight: FontWeight.bold,
                 color: _textColor,
               ),
@@ -2236,8 +2235,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             SizedBox(height: 20), // Increased spacing
             Container(
               height: 250,
-              padding: EdgeInsets.only(
-                  top: 16, right: 16), // Added padding for chart
+              padding: EdgeInsets.only(top: 16, right: 16), // Added padding for chart
               decoration: BoxDecoration(
                 color: Colors.grey[50], // Light background for chart area
                 borderRadius: BorderRadius.circular(8),
@@ -2251,9 +2249,10 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
                     touchTooltipData: BarTouchTooltipData(
                       getTooltipItem: (group, groupIndex, rod, rodIndex) {
                         int hour = sortedActivity[group.x.toInt()].key;
-                        String timeLabel = hour < 12
-                            ? '$hour AM'
-                            : (hour == 12 ? '12 PM' : '${hour - 12} PM');
+                        String timeLabel =
+                            hour < 12
+                                ? '$hour AM'
+                                : (hour == 12 ? '12 PM' : '${hour - 12} PM');
                         return BarTooltipItem(
                           '$timeLabel: ${rod.toY.toInt()} bees',
                           TextStyle(color: Colors.white),
@@ -2271,9 +2270,10 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
                           int hour = sortedActivity[value.toInt()].key;
                           // Only show every other hour to avoid crowding
                           if (hour % 3 != 0) return SizedBox();
-                          String timeLabel = hour < 12
-                              ? '$hour AM'
-                              : (hour == 12 ? '12 PM' : '${hour - 12} PM');
+                          String timeLabel =
+                              hour < 12
+                                  ? '$hour AM'
+                                  : (hour == 12 ? '12 PM' : '${hour - 12} PM');
                           return Padding(
                             padding: const EdgeInsets.only(top: 8.0),
                             child: Text(
@@ -2374,7 +2374,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             Text(
               'Foraging Patterns',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 18, 
                 fontWeight: FontWeight.bold,
                 color: _textColor,
               ),
@@ -2616,7 +2616,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             Text(
               'Activity Distribution by Time',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 18, 
                 fontWeight: FontWeight.bold,
                 color: _textColor,
               ),
@@ -2735,7 +2735,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             Text(
               'Activity by Day of Week',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 18, 
                 fontWeight: FontWeight.bold,
                 color: _textColor,
               ),
@@ -2743,8 +2743,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             SizedBox(height: 20), // Increased spacing
             Container(
               height: 250,
-              padding: EdgeInsets.only(
-                  top: 16, right: 16), // Added padding for chart
+              padding: EdgeInsets.only(top: 16, right: 16), // Added padding for chart
               decoration: BoxDecoration(
                 color: Colors.grey[50], // Light background for chart area
                 borderRadius: BorderRadius.circular(8),
@@ -2897,7 +2896,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             Text(
               'Hourly Population Flux',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 18, 
                 fontWeight: FontWeight.bold,
                 color: _textColor,
               ),
@@ -2910,8 +2909,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             SizedBox(height: 20), // Increased spacing
             Container(
               height: 250,
-              padding: EdgeInsets.only(
-                  top: 16, right: 16), // Added padding for chart
+              padding: EdgeInsets.only(top: 16, right: 16), // Added padding for chart
               decoration: BoxDecoration(
                 color: Colors.grey[50], // Light background for chart area
                 borderRadius: BorderRadius.circular(8),
@@ -2946,9 +2944,10 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
                           int hour = sortedFlux[value.toInt()].key;
                           // Only show every other hour to avoid crowding
                           if (hour % 3 != 0) return SizedBox();
-                          String timeLabel = hour < 12
-                              ? '$hour AM'
-                              : (hour == 12 ? '12 PM' : '${hour - 12} PM');
+                          String timeLabel =
+                              hour < 12
+                                  ? '$hour AM'
+                                  : (hour == 12 ? '12 PM' : '${hour - 12} PM');
                           return Padding(
                             padding: const EdgeInsets.only(top: 8.0),
                             child: Text(
@@ -3111,7 +3110,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             Text(
               'Recommendations',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 18, 
                 fontWeight: FontWeight.bold,
                 color: _textColor,
               ),
@@ -3264,7 +3263,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
             Text(
               'Optimal Foraging Conditions',
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 18, 
                 fontWeight: FontWeight.bold,
                 color: _textColor,
               ),
@@ -3275,8 +3274,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
               final conditions = entry.value;
 
               return Container(
-                margin: EdgeInsets.only(
-                    bottom: 20), // Increased spacing between conditions
+                margin: EdgeInsets.only(bottom: 20), // Increased spacing between conditions
                 padding: EdgeInsets.all(16),
                 decoration: BoxDecoration(
                   color: Colors.grey[50],
@@ -3336,7 +3334,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
     return SizedBox();
   }
 
-    final environmentalInsights = environmentalFactors['environmentalInsights'];
+  final environmentalInsights = environmentalFactors['environmentalInsights'];
 
   return Card(
     elevation: 4, // Increased elevation
@@ -3520,7 +3518,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
     double mean = overallRates.reduce((a, b) => a + b) / overallRates.length;
     double variance =
         overallRates.fold(0.0, (sum, rate) => sum + math.pow(rate - mean, 2)) /
-            overallRates.length;
+        overallRates.length;
     double stdDev = math.sqrt(variance);
     double cv = mean > 0 ? stdDev / mean : 0;
 
@@ -3618,7 +3616,7 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
     double mean = values.reduce((a, b) => a + b) / values.length;
     double variance =
         values.fold(0.0, (sum, value) => sum + math.pow(value - mean, 2)) /
-            values.length;
+        values.length;
     double stdDev = math.sqrt(variance);
 
     return mean > 0 ? stdDev / mean : 0;
@@ -3784,3 +3782,4 @@ class _ForagingAnalysisScreenState extends State<ForagingAnalysisScreen>
     );
   }
 }
+

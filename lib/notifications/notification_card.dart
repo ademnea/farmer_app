@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:HPGM/notifications/notification_model.dart';
+import 'package:farmer_app/notifications/notification_model.dart';
 
 class NotificationCard extends StatelessWidget {
   final HiveNotification notification;

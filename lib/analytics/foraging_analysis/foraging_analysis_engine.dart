@@ -1,10 +1,10 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:HPGM/bee_counter/bee_counter_model.dart';
-import 'package:HPGM/bee_counter/bee_count_database.dart';
-import 'package:HPGM/Services/weather_service.dart';
-import 'package:HPGM/analytics/foraging_analysis/time_based_return_rate_database.dart';
+import 'package:farmer_app/bee_counter/bee_counter_model.dart';
+import 'package:farmer_app/bee_counter/bee_count_database.dart';
+import 'package:farmer_app/Services/weather_service.dart';
+import 'package:farmer_app/analytics/foraging_analysis/time_based_return_rate_database.dart';
 
 class ForagingAnalysisEngine {
   // This class handles all foraging data processing and analytics

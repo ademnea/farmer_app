@@ -1,11 +1,15 @@
+// Removing explicit plugin versions as they conflict with Flutter's versions
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
 allprojects {
     repositories {
         google()
         mavenCentral()
-        jcenter()
-        
-        // Add this repository
-        maven { url = uri("https://jitpack.io") }
     }
 }
 

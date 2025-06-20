@@ -1,4 +1,4 @@
-import 'package:HPGM/components/custom_progress_bar.dart';
+import 'package:farmer_app/components/custom_progress_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:liquid_progress_indicator_v2/liquid_progress_indicator.dart';
 
@@ -151,3 +151,4 @@ Widget buildHoneySheet(String title, double? Levels) => SizedBox(
         ],
       ),
     );
+

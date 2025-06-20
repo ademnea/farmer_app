@@ -4,12 +4,12 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:fl_chart/fl_chart.dart';
-import 'package:HPGM/bee_counter/bee_counter_model.dart';
-import 'package:HPGM/bee_counter/bee_count_database.dart';
-import 'package:HPGM/bee_counter/weather-service.dart';
-import 'package:HPGM/bee_counter/foraging_efficiency_metric.dart' as efficiency;
-import 'package:HPGM/bee_counter/weatherdata.dart';
-import 'package:HPGM/bee_counter/foraging_report_generator.dart' as report_gen;
+import 'package:farmer_app/bee_counter/bee_counter_model.dart';
+import 'package:farmer_app/bee_counter/bee_count_database.dart';
+import 'package:farmer_app/bee_counter/weather-service.dart';
+import 'package:farmer_app/bee_counter/foraging_efficiency_metric.dart' as efficiency;
+import 'package:farmer_app/bee_counter/weatherdata.dart';
+import 'package:farmer_app/bee_counter/foraging_report_generator.dart' as report_gen;
 
 class BeeDashboardScreen extends StatefulWidget {
   final String hiveId;
@@ -1207,3 +1207,4 @@ class _BeeDashboardScreenState extends State<BeeDashboardScreen> {
     );
   }
 }
+

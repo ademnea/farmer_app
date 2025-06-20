@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:HPGM/Services/auth_services.dart';
-import 'package:HPGM/hive_model.dart';
+import 'package:farmer_app/Services/auth_services.dart';
+import 'package:farmer_app/hive_model.dart';
 
 class HiveDataService {
   static final HiveDataService _instance = HiveDataService._internal();

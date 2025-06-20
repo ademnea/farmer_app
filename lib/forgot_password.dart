@@ -1,4 +1,4 @@
-import 'package:HPGM/components/custom_text_field.dart';
+import 'package:farmer_app/components/custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 // import 'dart:convert';
@@ -167,3 +167,4 @@ class _ForgotPasswordState extends State<ForgotPassword> {
     }
   }
 }
+

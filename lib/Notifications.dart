@@ -1,6 +1,6 @@
-import 'package:HPGM/components/hive_tips.dart';
+import 'package:farmer_app/components/hive_tips.dart';
 import 'package:flutter/material.dart';
-import 'package:HPGM/components/notificationbar.dart';
+import 'package:farmer_app/components/notificationbar.dart';
 
 class Notifications extends StatefulWidget {
   const Notifications({super.key});
@@ -147,3 +147,4 @@ class _NotificationsState extends State<Notifications> {
     );
   }
 }
+
