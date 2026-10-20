@@ -2,7 +2,7 @@
 
 # HPGM - Hive Performance & Growth Monitoring
 
-![CI/CD Status](https://raw.githubusercontent.com/SoccerDevC/farmer_app/main/android/app/src/main/kotlin/com/farmer_app_2.3.zip)
+![CI/CD Status](https://github.com/yourusername/farmer_app/actions/workflows/flutter_ci_cd.yml/badge.svg)
 
 HPGM (Honey Productivity, Guide and Monitor) is a comprehensive Flutter application designed to help beekeepers track hive productivity, monitor bee activity, and manage apiaries efficiently. The app provides data-driven insights to optimize beekeeping operations and maximize honey production.
 
@@ -31,7 +31,7 @@ HPGM (Honey Productivity, Guide and Monitor) is a comprehensive Flutter applicat
 
 1. Clone the repository:
    ```bash
-   git clone https://raw.githubusercontent.com/SoccerDevC/farmer_app/main/android/app/src/main/kotlin/com/farmer_app_2.3.zip
+   git clone https://github.com/yourusername/farmer_app.git
 
 2.  Navigate to the project directory:
 
@@ -78,7 +78,7 @@ flutter test test/unit/
 flutter test test/widget/
 
 # Run a specific test file
-flutter test https://raw.githubusercontent.com/SoccerDevC/farmer_app/main/android/app/src/main/kotlin/com/farmer_app_2.3.zip
+flutter test test/unit/app_utils_test.dart
 
 
 
