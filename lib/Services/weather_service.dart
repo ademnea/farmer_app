@@ -161,6 +161,43 @@ class WeatherService {
     return results;
   }
 
+  // Get weather data for a date range
+  static Future<Map<DateTime, dynamic>> getWeatherDataForDateRange(
+    DateTime startDate,
+    DateTime endDate, {
+    String location = 'auto:ip',
+  }) async {
+    // Create a map of DateTime -> WeatherData
+    Map<DateTime, dynamic> weatherByDate = {};
+
+    // Clone the start date to avoid modifying the original
+    DateTime currentDate = DateTime(
+      startDate.year,
+      startDate.month,
+      startDate.day,
+    );
+
+    // For each day in the range, get weather summary
+    while (!currentDate.isAfter(endDate)) {
+      final weatherSummary = await getWeatherSummary(
+        currentDate,
+        location: location,
+      );
+
+      // Store data by date
+      weatherByDate[DateTime(
+        currentDate.year,
+        currentDate.month,
+        currentDate.day,
+      )] = weatherSummary;
+
+      // Move to next day
+      currentDate = currentDate.add(const Duration(days: 1));
+    }
+
+    return weatherByDate;
+  }
+
   // Get weather summary for a specific date
   static Future<Map<String, dynamic>> getWeatherSummary(
     DateTime date, {

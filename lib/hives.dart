@@ -1,11 +1,11 @@
-import 'package:HPGM/records_form.dart';
+import 'package:farmer_app/records_form.dart';
 import 'package:flutter/material.dart';
-import 'package:HPGM/hivedetails.dart';
+import 'package:farmer_app/hivedetails.dart';
 import 'package:http/http.dart' as http;
 import 'package:liquid_progress_indicator_v2/liquid_progress_indicator.dart';
 import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
-import 'package:HPGM/components/custom_progress_bar.dart';
-import 'package:HPGM/components/pop_up.dart';
+import 'package:farmer_app/components/custom_progress_bar.dart';
+import 'package:farmer_app/components/pop_up.dart';
 import 'dart:convert';
 
 class Hives extends StatefulWidget {

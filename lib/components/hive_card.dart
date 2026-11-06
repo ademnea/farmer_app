@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:HPGM/hivedetails.dart';
-import 'package:HPGM/components/custom_progress_bar.dart';
-import 'package:HPGM/components/pop_up.dart';
+import 'package:farmer_app/hivedetails.dart';
+import 'package:farmer_app/components/custom_progress_bar.dart';
+import 'package:farmer_app/components/pop_up.dart';
 import 'package:liquid_progress_indicator_v2/liquid_progress_indicator.dart';
-import 'package:HPGM/records_form.dart';
+import 'package:farmer_app/records_form.dart';
 
 class Hive {
   final int id;
@@ -256,3 +256,4 @@ class HiveCard extends StatelessWidget {
     );
   }
 }
+

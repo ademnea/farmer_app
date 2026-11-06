@@ -1,7 +1,7 @@
 // profile_screen.dart
 import 'package:flutter/material.dart';
-import 'package:HPGM/Services/auth_services.dart'; // Assuming you have this
-import 'package:HPGM/login.dart'; // Assuming you have this
+import 'package:farmer_app/Services/auth_services.dart'; // Assuming you have this
+import 'package:farmer_app/login.dart'; // Assuming you have this
 
 class ProfileScreen extends StatefulWidget {
   final String token;
@@ -359,3 +359,4 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 }
+

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
-import 'package:HPGM/dashboard_screen.dart';
+import 'package:farmer_app/dashboard_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart'; // Add this import if not already there
 
 class AuthService {
@@ -133,3 +133,4 @@ class AuthService {
     return false;
   }
 }
+

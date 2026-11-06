@@ -2,8 +2,8 @@
 // import 'dart:io';
 // import 'package:path_provider/path_provider.dart';
 // import 'package:shared_preferences/shared_preferences.dart';
-// import 'package:HPGM/bee_counter/bee_counter_model.dart';
-// import 'package:HPGM/bee_counter/bee_video_analysis_result.dart';
+// import 'package:farmer_app/bee_counter/bee_counter_model.dart';
+// import 'package:farmer_app/bee_counter/bee_video_analysis_result.dart';
 
 // /// Service for storing bee counter data locally
 // class LocalStorageService {
@@ -317,3 +317,4 @@
 //     }
 //   }
 // }
+

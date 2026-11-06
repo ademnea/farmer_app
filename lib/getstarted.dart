@@ -1,4 +1,4 @@
-import 'package:HPGM/login.dart';
+import 'package:farmer_app/login.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -149,3 +149,4 @@ class _GetStartedState extends State<GetStarted> {
     );
   }
 }
+

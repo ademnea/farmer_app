@@ -1,4 +1,4 @@
-import 'package:HPGM/bee_counter/weatherdata.dart';
+import 'package:farmer_app/bee_counter/weatherdata.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -237,3 +237,4 @@ class WeatherService {
     _client.close();
   }
 }
+

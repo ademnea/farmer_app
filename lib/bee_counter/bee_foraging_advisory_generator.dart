@@ -1,6 +1,6 @@
-import 'package:HPGM/bee_counter/bee_counter_model.dart';
-import 'package:HPGM/bee_counter/weatherdata.dart';
-import 'package:HPGM/bee_counter/foraging_efficiency_metric.dart';
+import 'package:farmer_app/bee_counter/bee_counter_model.dart';
+import 'package:farmer_app/bee_counter/weatherdata.dart';
+import 'package:farmer_app/bee_counter/foraging_efficiency_metric.dart';
 import 'package:intl/intl.dart';
 
 /// A class for generating evidence-based bee foraging advisories

@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:intl/intl.dart';
-import 'package:HPGM/bee_counter/bee_counter_model.dart';
-import 'package:HPGM/Services/weather_service.dart';
-import 'package:HPGM/bee_counter/foraging_efficiency_metric.dart';
+import 'package:farmer_app/bee_counter/bee_counter_model.dart';
+import 'package:farmer_app/Services/weather_service.dart';
+import 'package:farmer_app/bee_counter/foraging_efficiency_metric.dart';
 
 /// Utility class for generating charts and visualizations for PDF reports
 class ReportChartGenerator {

@@ -1,7 +1,7 @@
 import 'dart:async';
-import 'package:HPGM/getstarted.dart';
-import 'package:HPGM/login.dart';
-import 'package:HPGM/navbar.dart';
+import 'package:farmer_app/getstarted.dart';
+import 'package:farmer_app/login.dart';
+import 'package:farmer_app/navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -66,3 +66,4 @@ class _SplashscreenState extends State<Splashscreen> {
     );
   }
 }
+

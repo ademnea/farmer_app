@@ -1,5 +1,5 @@
-// import 'package:HPGM/components/custom_progress_bar.dart';
-import 'package:HPGM/components/pop_up.dart';
+// import 'package:farmer_app/components/custom_progress_bar.dart';
+import 'package:farmer_app/components/pop_up.dart';
 import 'package:flutter/material.dart';
 import 'package:liquid_progress_indicator_v2/liquid_progress_indicator.dart';
 import 'farm_model.dart';
@@ -196,13 +196,16 @@ Widget _buildStatusIndicator({
             children: [
               Icon(icon, color: Colors.orange[700], size: 20),
               const SizedBox(width: 8),
-              Text(
-                label,
-                style: const TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500,
-                  color: Colors.white,
-                  fontFamily: "Sans",
+              Flexible(
+                child: Text(
+                  label,
+                  style: const TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white,
+                    fontFamily: "Sans",
+                  ),
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
             ],
@@ -211,13 +214,16 @@ Widget _buildStatusIndicator({
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                '${value.toStringAsFixed(1)}$unit',
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  fontFamily: "Sans",
+              Flexible(
+                child: Text(
+                  '${value.toStringAsFixed(1)}$unit',
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontFamily: "Sans",
+                  ),
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
               SizedBox(
